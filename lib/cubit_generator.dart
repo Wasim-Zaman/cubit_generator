@@ -1,3 +1,3 @@
 library cubit_generator;
 
-export 'src/generator.dart';
+export './bin/cubit_generator.dart';

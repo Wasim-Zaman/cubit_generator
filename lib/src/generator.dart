@@ -1,4 +1,3 @@
-// lib/src/generator.dart
 import 'dart:io';
 
 import 'package:args/args.dart';
@@ -32,9 +31,12 @@ void main(List<String> arguments) {
 }
 
 void createCubit(String cubitName) {
-  final cubitsDir = Directory('lib/cubits');
+  // Determine the user's project directory
+  final currentDir = Directory.current.path;
+  final cubitsDir = Directory('$currentDir/lib/cubits');
+
   if (!cubitsDir.existsSync()) {
-    print('Creating cubits directory...');
+    print('Creating cubits directory in the user project...');
     cubitsDir.createSync(recursive: true);
   }
 
@@ -50,8 +52,7 @@ void createCubit(String cubitName) {
   cubitFile.writeAsStringSync(_cubitTemplate(cubitName));
   statesFile.writeAsStringSync(_statesTemplate(cubitName));
 
-  print(
-      'Cubit and states files created successfully in lib/cubits/$cubitName!');
+  print('Cubit and states files created successfully in ${cubitDir.path}!');
 }
 
 String _cubitTemplate(String cubitName) {
