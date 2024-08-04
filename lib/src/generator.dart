@@ -1,3 +1,4 @@
+// lib/src/generator.dart
 import 'dart:io';
 
 import 'package:args/args.dart';
@@ -15,26 +16,31 @@ void main(List<String> arguments) {
     exit(0);
   }
 
-  if (argResults.command?.name == 'create') {
-    final cubitName = argResults.rest.isNotEmpty ? argResults.rest[0] : null;
+  final command = argResults.command;
+  if (command?.name == 'create') {
+    final cubitName =
+        command?.arguments.isNotEmpty == true ? command?.arguments[0] : null;
 
-    if (cubitName == null) {
+    if (cubitName == null || cubitName.isEmpty) {
       print('Error: No cubit name provided.');
       exit(1);
     }
 
+    print('Creating cubit: $cubitName');
     createCubit(cubitName);
   }
 }
 
 void createCubit(String cubitName) {
-  final cubitsDir = Directory('cubits');
+  final cubitsDir = Directory('lib/cubits');
   if (!cubitsDir.existsSync()) {
-    cubitsDir.createSync();
+    print('Creating cubits directory...');
+    cubitsDir.createSync(recursive: true);
   }
 
   final cubitDir = Directory('${cubitsDir.path}/$cubitName');
   if (!cubitDir.existsSync()) {
+    print('Creating cubit directory: ${cubitDir.path}...');
     cubitDir.createSync();
   }
 
@@ -44,7 +50,8 @@ void createCubit(String cubitName) {
   cubitFile.writeAsStringSync(_cubitTemplate(cubitName));
   statesFile.writeAsStringSync(_statesTemplate(cubitName));
 
-  print('Cubit and states files created successfully!');
+  print(
+      'Cubit and states files created successfully in lib/cubits/$cubitName!');
 }
 
 String _cubitTemplate(String cubitName) {
@@ -72,4 +79,7 @@ class ${className}Initial extends ${className}State {}
   ''';
 }
 
-String _capitalize(String s) => s[0].toUpperCase() + s.substring(1);
+String _capitalize(String s) {
+  if (s.isEmpty) return s;
+  return s[0].toUpperCase() + s.substring(1);
+}

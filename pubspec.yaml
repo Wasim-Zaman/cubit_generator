@@ -1,7 +1,7 @@
 name: cubit_generator
-description: "A new Flutter package project."
-version: 0.0.1
-homepage: https://github.com/Wasim-Zaman/flutter_easy_paginate
+description: "A Flutter package to automate the creation of Cubit and state files with basic boilerplate and structured directory management. It provides a command-line tool for generating Cubit classes and their associated states, including `part` and `part of` directives, to streamline the development process and ensure consistency across Flutter projects."
+version: 0.1.1
+homepage: https://github.com/Wasim-Zaman/cubit_generator
 
 environment:
   sdk: '>=3.4.4 <4.0.0'

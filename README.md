@@ -1,39 +1,22 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Cubit Generator
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/guides/libraries/writing-package-pages).
+[![Pub Version](https://img.shields.io/pub/v/cubit_generator)](https://pub.dev/packages/cubit_generator)
+[![License](https://img.shields.io/badge/license-MIT-blue.svg)](https://opensource.org/licenses/MIT)
 
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-library-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/developing-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+**Cubit Generator** is a Flutter package designed to automate the creation of Cubit and state files, streamlining the development process for state management in Flutter applications. This tool provides a command-line interface (CLI) for generating Cubit classes and their associated states, ensuring consistency and reducing boilerplate code.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- **Automated File Generation:** Quickly generate Cubit and state files with a single command.
+- **Structured Directory Management:** Organizes generated files into a `cubits` directory with subdirectories for each Cubit.
+- **Seamless Integration:** Includes `part` and `part of` directives for easier file management.
+- **Customizable:** Easily extend and modify generated code to fit your specific needs.
 
-## Getting started
+## Installation
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+To use Cubit Generator, add it to your `pubspec.yaml` file:
 
-## Usage
-
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
-
-```dart
-const like = 'sample';
+```yaml
+dependencies:
+  cubit_generator: ^0.0.2
 ```
-
-## Additional information
-
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
