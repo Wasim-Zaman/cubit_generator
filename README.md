@@ -18,5 +18,5 @@ To use Cubit Generator, add it to your `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  cubit_generator: ^0.0.2
+  cubit_generator: ^0.1.1
 ```

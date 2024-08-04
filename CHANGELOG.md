@@ -7,7 +7,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-## [0.0.2] - 2024-08-03
+## [0.1.1] - 2024-08-03
 
 ### Added
 
@@ -17,7 +17,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Automatic creation of `cubits` directory and subdirectories for each Cubit.
 - Templates for Cubit and state files with initial state class.
 
-## [0.0.2] - 2024-08-10
+## [0.1.1] - 2024-08-10
 
 ### Added
 
@@ -29,7 +29,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Bug where `part of` directive was incorrectly referencing the Cubit file.
 - Fixed issue with generating state classes with special characters in the name.
 
-## [0.0.2] - 2024-08-15
+## [0.1.0] - 2024-08-15
 
 ### Changed
 
