@@ -1,8 +1,8 @@
 name: cubit_generator
-description: "A command-line application for generating Cubit files in Flutter projects."
+description: "A CLI application for generating Cubit files in Flutter projects."
 executables:
   cubit_generator:
-version: 1.0.0
+version: 1.0.1
 homepage: https://github.com/Wasim-Zaman/cubit_generator
 
 environment:
