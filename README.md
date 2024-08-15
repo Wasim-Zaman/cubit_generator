@@ -14,9 +14,24 @@
 
 ## Installation
 
-To use Cubit Generator, add it to your `pubspec.yaml` file:
+```bash
+dart pub global activate cubit_generator
+```
 
-```yaml
-dependencies:
-  cubit_generator: ^0.1.1
+## Usage
+
+Navigate to your Flutter project's root directory and run:
+
+```bash
+cubit_generator --name YourCubitName
+```
+
+This will create a new Cubit in your project:
+
+```
+lib/
+  cubits/
+    your_cubit_name/
+      your_cubit_name_cubit.dart
+      your_cubit_name_state.dart
 ```

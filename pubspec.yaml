@@ -1,6 +1,8 @@
 name: cubit_generator
-description: "A Flutter package to automate the creation of Cubit and state files with basic boilerplate and structured directory management. It provides a command-line tool for generating Cubit classes and their associated states, including `part` and `part of` directives, to streamline the development process and ensure consistency across Flutter projects."
-version: 0.1.3
+description: "A command-line application for generating Cubit files in Flutter projects."
+executables:
+  cubit_generator:
+version: 1.0.0
 homepage: https://github.com/Wasim-Zaman/cubit_generator
 
 environment:
@@ -11,11 +13,13 @@ dependencies:
   flutter:
     sdk: flutter
   args: ^2.5.0
+  path: ^1.9.0
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^3.0.0
+  test: ^1.16.0
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
